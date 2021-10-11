@@ -5,10 +5,16 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        {/* // logo */}
         <img src={logo} className="App-logo" alt="logo" />
+        
+        {/* // message */}
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Attaporn  Peungsook
+          {/* Edit <code>src/App.js</code> and save to reload. */}
         </p>
+
+        {/* // link */}
         <a
           className="App-link"
           href="https://reactjs.org"

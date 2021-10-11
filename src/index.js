@@ -3,12 +3,24 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import HelloComponent3 from './components/Hello';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+// rendering -> call take to all component
+
+// create component 
+function HelloComponent(){
+  return <h1>สวัสดี component</h1>
+}
+
+// class component 
+class HelloComponent2 extends React.Component{
+  render(){
+    return <h1>สวัสดี component </h1>
+  }
+}
+
+// create vatuial dom
+ReactDOM.render(<HelloComponent3/> ,document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
