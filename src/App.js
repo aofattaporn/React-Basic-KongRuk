@@ -1,29 +1,19 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import Transaction from "./components/Transaction"
+
+
+const Titile = () => <h1 style={{color:"red", textAlign:"center"}}>program callculate</h1>
+const Description = ()=><p style={{color:"red", textAlign:"center"}}>บันทึกข้อมูลบัฐชีในแต่ละวัน</p>
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        {/* // logo */}
-        <img src={logo} className="App-logo" alt="logo" />
-        
-        {/* // message */}
-        <p>
-          Attaporn  Peungsook
-          {/* Edit <code>src/App.js</code> and save to reload. */}
-        </p>
-
-        {/* // link */}
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* nested-component */}
+      <Titile/>
+      <Description/>
+      <Transaction/>
     </div>
   );
 }
