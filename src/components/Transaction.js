@@ -1,20 +1,24 @@
 import './Transaction.css'
+import Item from './Item';
+import { v4 as uuidv4 } from 'uuid';
 
-const Item = ()=>{
-   // dynamices data
-   const name = "พักโรงแรม";
-   const amout = 5000;
-
-   return (
-   <li className="item">{name} <span>-{amout}</span></li>
-   )
-}
 
 const Transaction=()=>{
+  const data = [
+    {title: 400 ,amonut:"2000", key:uuidv4()},
+    {title: "เงินเดือน",amonut:"500000", key:uuidv4()},
+  ]
+
    return(
+
      <ul className="item-list">
-       <Item/>
-       <Item/>
+       {
+        //  Array Map
+         data.map((element)=>{
+          //  return <Item title={element.title} amonut={element.amonut} key={uuidv4()} />
+           return <Item {...element} key={uuidv4()} />
+         })
+       }
     </ul>
    )
  }
