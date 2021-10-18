@@ -1,0 +1,28 @@
+label{
+   display: inline-block;
+   nav-right: 10px 0px;
+}
+
+input {
+   border: 1px solid #dfdfdf;
+   border-radius: 2px;
+   display: block;
+   font-size: 16px;
+   padding: 10px;
+   width: 100%;
+}
+
+input:focus{
+   outline: none;
+}
+
+.btn {
+   background-color: darkorchid;
+   color: aliceblue;
+   cursor: pointer;
+   display: block;
+   margin: 10px 0px 30px;
+   padding: 10px;
+   font-size: 16px;
+   width: 100%;
+}

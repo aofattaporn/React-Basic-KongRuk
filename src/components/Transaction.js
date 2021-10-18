@@ -1,24 +1,19 @@
 import './Transaction.css'
 import Item from './Item';
-import { v4 as uuidv4 } from 'uuid';
 
+const Transaction=(props)=>{
 
-const Transaction=()=>{
-  const data = [
-    {title: 400 ,amonut:"2000", key:uuidv4()},
-    {title: "เงินเดือน",amonut:"500000", key:uuidv4()},
-  ]
+  const {items} = props;
 
    return(
-
      <ul className="item-list">
        {
         //  Array Map
-         data.map((element)=>{
-          //  return <Item title={element.title} amonut={element.amonut} key={uuidv4()} />
-           return <Item {...element} key={uuidv4()} />
+         items.map((element)=>{
+          return <Item key={element} {...element} />
          })
        }
+
     </ul>
    )
  }

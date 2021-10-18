@@ -1,0 +1,10 @@
+p {
+   text-align: center;
+   padding: 15px;
+   background-color: rgb(182, 125, 235);
+   height: 50px;
+   font-size: 18px;
+   color: azure;
+   border-radius: 20px;
+   box-shadow: 15px;
+}
