@@ -6,15 +6,16 @@ const Transaction=(props)=>{
   const {items} = props;
 
    return(
-     <ul className="item-list">
-       {
-        //  Array Map
-         items.map((element)=>{
-          return <Item key={element} {...element} />
-         })
-       }
-
-    </ul>
+     <div>
+      <ul className="item-list">
+        {
+          //  Array Map
+          items.map((element)=>{
+            return <Item key={element.id} {...element} />
+          })
+        }
+      </ul>
+    </div>
    )
  }
 

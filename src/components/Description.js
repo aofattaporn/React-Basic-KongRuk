@@ -1,7 +1,7 @@
 import './Description.css' 
 
 const Description = ()=>{
-   return <p>บันทึกข้อมูลบัฐชีในแต่ละวัน</p>
+   return <p className = "title">บันทึกข้อมูลบัฐชีในแต่ละวัน</p>
 }
 
 export default Description

@@ -1,12 +1,18 @@
 import PropTypes from 'prop-types'; // ES6
+import './Items.css'
 
 // props destucturing
 const Item = (props)=>{ 
-   const {title, amount} = props;
+   const { title, amount} = props;
+
+   // check amount 
+   const status = amount < 0 ? "expense" : "income"
+   const symbol = amount < 0 ? "-" : "+"
 
    return (
    // {variable}
-   <li> {title}<span>{amount}</span></li>
+   <li className={status}> {title} {status}<span>{symbol} {Math.abs(amount)}</span>
+   </li>
 
    )
 }

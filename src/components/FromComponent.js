@@ -1,5 +1,5 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './FormComponent.css';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -7,6 +7,7 @@ const FormComponent=(props)=>{
    // set State by React hook
    const [title, setTitle] = useState('');
    const [amount, setAmount] = useState(0);
+   const [formValid, setFormValid] = useState(false);
 
    // curent title -> event -> set 
    const inputTitle = (event)=>{
@@ -34,6 +35,13 @@ const FormComponent=(props)=>{
    
    }
 
+   useEffect(()=>{
+      const status = amount !== 0 && title.trim().length >= 0
+      if(status){
+         setFormValid(true)
+      }
+   }, [title, amount])
+
    return(
       <div>
          <form onSubmit={saveItem}>
@@ -51,7 +59,7 @@ const FormComponent=(props)=>{
 
             {/* // sumit */}
             <div>
-               <button className='btn' type='submit'>add data</button>
+               <button className='btn' type='submit' disabled={!formValid}>add data</button>
             </div>
             
          </form>
